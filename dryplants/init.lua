@@ -1,10 +1,11 @@
 -----------------------------------------------------------------------------------------------
 local title		= "Grasses" -- former "Dry plants"
-local version 	= "0.1.6"
+local version 	= "0.1.8"
 local mname		= "dryplants"
 -----------------------------------------------------------------------------------------------
 -- by Mossmanikin
 -- textures & ideas partly by Neuromancer
+-- original code & textures for jungle grass by VanessaE
 
 -- License (everything): 	WTFPL
 -- Contains code from: 		default, farming 
@@ -27,6 +28,13 @@ if EXTRA_TALL_GRASS_GENERATES == true then
 dofile(minetest.get_modpath("dryplants").."/moregrass.lua")
 end
 --dofile(minetest.get_modpath("dryplants").."/meadowvariation.lua")
+if JUNGLEGRASS_GENERATES == true then
+dofile(minetest.get_modpath("dryplants").."/junglegrass.lua")
+--else
+--minetest.register_alias("junglegrass:shortest", "air")
+--minetest.register_alias("junglegrass:short", "air")
+--minetest.register_alias("junglegrass:medium", "air")
+end
 
 -----------------------------------------------------------------------------------------------
 -- Sickle

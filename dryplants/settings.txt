@@ -1,7 +1,24 @@
+-- In case you don't wanna have errors:
+
+-- Only change what's behind a "=" (or "--"). 
+-- Don't use caps (behind a "=").
+
+-- If there's a "false" (behind a "=") you can change it to "true" (and the other way around).
+-- Spelling is important.
+-- If "true" or "false" is necessary as setting, everything(!) which is not spelled "true" will be read as if it were "false" (even "1", "True"...)
+
+-- If you wanna comment something (for example to remember the default value), you can do this by putting "--" in front of the comment.
+-- You can put "--" at the end of a line with "=" in it, or at the beginning of an empty/new line (minetest will ignore what's behind it then).
+-- But don't put "--" in front of a line with "=" in it (or else minetest will ignore the setting and you might get an error).
+
+-- If something is still unclear, don't hesitate to post your question @ https://forum.minetest.net/viewtopic.php?id=7143
+
+
 -- Here you can enable/disable the different plants
 REEDMACE_GENERATES 					= 	true
 SMALL_JUNCUS_GENERATES 				= 	true
 EXTRA_TALL_GRASS_GENERATES 			= 	true
+JUNGLEGRASS_GENERATES				=	true
 
 
 
@@ -49,4 +66,10 @@ REED_WILL_DRY 						= 	false	-- wet reed nodes will become dry reed nodes
 REED_DRYING_TIME 					= 	3600 	-- seconds
 
 AUTO_ROOF_CORNER 					= 	true
-	
+
+
+
+-- Jungle Grass settings
+JUNGLEGRASS_PER_MAPBLOCK			=	4800	-- plants per 80x80x80 nodes (absolute maximum number)
+JUNGLEGRASS_RARITY					=	58		-- percent
+JUNGLEGRASS_SPAWNING				=	false	-- jungle grass grows after(!) map generation
